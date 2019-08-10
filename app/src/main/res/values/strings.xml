@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ViewPager</string>
+    <string name="no_image">No Image</string>
+    <!--<string name="tutorial_by">Tutorial By <a class="vglnk" href="http://Tutorialwing.com" rel="nofollow"><span>Tutorialwing</span><span>.</span><span>com</span></a></string>-->
+    <string name="first_fragment">Light Red Colour</string>
+    <string name="second_fragment">Green Colour</string>
+    <string name="third_fragment">Orange Colour</string>
+    <string name="Page_one">Page One</string>
+    <string name="Page_two">Page Two</string>
+    <string name="Page_three">Page Three</string>
+    <string name="Button_one">Next</string>
+    <string name="Button_two">Next</string>
+    <string name="Button_twob">Previous</string>
+    <string name="Button_three">Previous</string>
+
+</resources>
