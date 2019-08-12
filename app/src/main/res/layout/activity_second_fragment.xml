@@ -32,18 +32,18 @@
         android:textSize="17sp" />
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="move2"
-        android:text="@string/Button_two" />
-
-    <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="move3"
+        android:text="@string/Button_two" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/Button_twob" />
+
+
 
 
 </LinearLayout>

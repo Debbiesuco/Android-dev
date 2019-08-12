@@ -4,16 +4,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 public class FirstFragment extends Fragment {
-    ViewPager viewPager;
+
     ImageView imageView;
+    TextView textView;
+
+    private Button nextButton1;
 
 
     @Nullable
@@ -22,14 +26,28 @@ public class FirstFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_first_fragment, container, false);
 
-//        TextView textView = view.findViewById(R.id.txtMain);
-//        textView.setText(R.string.first_fragment);
 
         imageView = view.findViewById(R.id.imgMain);
         imageView.setImageResource(R.mipmap.ic_launcher);
 
 
-//        viewPager = view.findViewById(R.id.viewPager);
+        nextButton1 = view.findViewById(R.id.button1);
+
+
+        nextButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ((MainActivity) getActivity()).selectFragment(1);
+
+                textView = getActivity().findViewById(R.id.txtMain2);
+
+                textView.setText(R.string.second_fragment);
+
+                //Toast.makeText(getContext(),"This is a toast", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
         return view;

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,10 @@ public class SecondFragment extends Fragment {
 
     ViewPager viewPager;
     TextView textView;
+    TextView txtView;
+
+    private Button nextButton2;
+    private Button prevButton2;
 
 
     @Nullable
@@ -28,12 +33,39 @@ public class SecondFragment extends Fragment {
         ImageView imageView = view.findViewById(R.id.imgMain);
         imageView.setImageResource(R.mipmap.ic_launcher);
 
-//        viewPager = view.findViewById(R.id.viewPager);
+
+        nextButton2 = view.findViewById(R.id.button2);
+        prevButton2 = view.findViewById(R.id.button3);
+
+        textView = view.findViewById(R.id.txtMain3);
+        txtView = view.findViewById(R.id.txtMain);
+
+        nextButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ((MainActivity) getActivity()).selectFragment(2);
+
+
+                textView = getActivity().findViewById(R.id.txtMain3);
+                textView.setText(R.string.second_fragment);
+            }
+        });
+
+        prevButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ((MainActivity) getActivity()).selectFragment(0);
+
+
+                textView = getActivity().findViewById(R.id.txtMain);
+                textView.setText(R.string.second_fragment);
+            }
+        });
 
         return view;
     }
-
-
 
 
 }

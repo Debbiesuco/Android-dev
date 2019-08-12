@@ -1,8 +1,6 @@
 package com.example.viewpager;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -10,7 +8,6 @@ import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
-    TextView textView;
 
 
     @Override
@@ -25,40 +22,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-//            TextView textView = findViewById(R.id.txtMain);
-//            textView.setText(R.string.second_fragment);
-
-        // TextView result = textView;
-
     }
 
+    public void selectFragment(int position) {
 
-    public void move(View view) {
-        viewPager.setCurrentItem(1);
-
-        textView = findViewById(R.id.txtMain2);
-        textView.setText(R.string.second_fragment);
+        viewPager.setCurrentItem(position, true);
 
     }
-
-    public void move2(View view) {
-        viewPager.setCurrentItem(2);
-
-        textView = findViewById(R.id.txtMain3);
-        textView.setText(R.string.third_fragment);
-
-    }
-
-
-
-
-    public void move3(View view) {
-        viewPager.setCurrentItem(0);
-
-        textView = findViewById(R.id.txtMain);
-        textView.setText(R.string.first_fragment);
-
-    }
-
 
 }

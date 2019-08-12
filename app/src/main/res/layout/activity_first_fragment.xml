@@ -34,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
-        android:onClick="move"
         android:text="@string/Button_one"/>
+
+
 
 </LinearLayout>
