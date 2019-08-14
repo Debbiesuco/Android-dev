@@ -19,6 +19,8 @@ public class SecondFragment extends Fragment {
     TextView textView;
     TextView txtView;
 
+    MainActivity test;
+
     private Button nextButton2;
     private Button prevButton2;
 
@@ -44,7 +46,10 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                ((MainActivity) getActivity()).selectFragment(2);
+                //((MainActivity) getActivity()).selectFragment(2);
+
+                test = new MainActivity();
+                test.testFunctionOne();
 
 
                 textView = getActivity().findViewById(R.id.txtMain3);
@@ -56,8 +61,10 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                ((MainActivity) getActivity()).selectFragment(0);
+                //((MainActivity) getActivity()).selectFragment(0);
 
+                test = new MainActivity();
+                test.testFunctionTwo();
 
                 textView = getActivity().findViewById(R.id.txtMain);
                 textView.setText(R.string.second_fragment);

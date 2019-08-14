@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 
-public class MainActivity extends AppCompatActivity {
-    ViewPager viewPager;
+public class MainActivity extends AppCompatActivity implements MyInterface {
+    public  static ViewPager viewPager;
 
 
     @Override
@@ -24,10 +24,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void selectFragment(int position) {
-
-        viewPager.setCurrentItem(position, true);
-
+    @Override
+    public void testFunctionOne(){
+        viewPager.setCurrentItem(viewPager.getCurrentItem()+1,true);
     }
+
+    @Override
+    public void testFunctionTwo(){
+        viewPager.setCurrentItem(viewPager.getCurrentItem()-1,true);
+    }
+
+//    public void selectFragment(int position) {
+//
+//        viewPager.setCurrentItem(position, true);
+//
+//    }
 
 }

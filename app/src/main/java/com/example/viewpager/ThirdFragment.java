@@ -18,6 +18,8 @@ public class ThirdFragment extends Fragment {
     ViewPager viewPager;
     TextView textView;
 
+    MainActivity test;
+
     private Button prevButton4;
 
 
@@ -40,10 +42,13 @@ public class ThirdFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                ((MainActivity) getActivity()).selectFragment(1);
+                //((MainActivity) getActivity()).selectFragment(1);
+
+                test = new MainActivity();
+                test.testFunctionTwo();
 
                 textView = getActivity().findViewById(R.id.txtMain2);
-                textView.setText(R.string.second_fragment);
+                textView.setText(R.string.third_fragment);
             }
         });
 

@@ -18,6 +18,8 @@ public class FirstFragment extends Fragment {
     TextView textView;
 
     private Button nextButton1;
+    MainActivity test;
+
 
 
     @Nullable
@@ -38,11 +40,14 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                ((MainActivity) getActivity()).selectFragment(1);
+                //((MainActivity) getActivity()).selectFragment(1);
+
+                test = new MainActivity();
+                test.testFunctionOne();
 
                 textView = getActivity().findViewById(R.id.txtMain2);
 
-                textView.setText(R.string.second_fragment);
+                textView.setText(R.string.first_fragment);
 
                 //Toast.makeText(getContext(),"This is a toast", Toast.LENGTH_SHORT).show();
 
